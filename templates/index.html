@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hinglish Sentiment Analyzer</title>
+    <style>
+        body { 
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        textarea {
+            width: 50%;
+            height: 100px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🗣️ Hinglish Sentiment Analyzer</h1>
+    <form method="POST">
+        <textarea name="user_input" placeholder="Type Hinglish sentence here..."></textarea><br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        Sentiment: {{ result }}
+    </div>
+    {% endif %}
+</body>
+</html>
